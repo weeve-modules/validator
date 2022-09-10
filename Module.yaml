@@ -22,17 +22,16 @@ envs:                                   # Array of environment variables that wi
       - option_A
       - option_B
       - option_C
-    dependencies:                     # List of dependencies for the field. This field is only displayed if all the dependencies are met. If
-      - key:                          # key of the dependency
-        value:                        # value of the dependency
+    dependencies: []                  # List of dependencies for the field. This field is only displayed if all the dependencies are met. If
   - name: Setting 2
     key: ENVIRONMENT_2
     description: Module setting 2
     value: ''
     type: 'number'
+    options: []
     dependencies:
-      - key: ENVIRONMENT_1
-        value: option_B
+      - key: ENVIRONMENT_1              # key of the dependency
+        value: option_B                 # value of the dependency
 ports:                                  # Array of ports that will be exposed by the module.
   - container: 8080                     # Port number from the container.
     host: 8080                          # Port number to map on the host.
